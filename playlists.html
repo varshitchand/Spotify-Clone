@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Liked Playlist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #191414;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1DB954;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .artist-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .artist-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    .artist-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .artist-details {
+      text-align: center;
+    }
+
+    .song-table {
+      width: 800px;
+      border-collapse: collapse;
+    }
+
+    .song-table thead {
+      background-color: #1DB954;
+    }
+
+    .song-table th,
+    .song-table td {
+      height: 100px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .song-table th {
+      font-weight: bold;
+    }
+
+    .song-table tbody tr:nth-child(even) {
+      background-color: #282828;
+    }
+
+    .song-table tbody tr:hover {
+      background-color: #383838;
+    }
+
+    .song-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .song-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .liked-playlist-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1DB954;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .liked-playlist-button:hover {
+      background-color: #168f3a;
+    }
+    tbody tr{
+        height: 50px;
+    }
+    .demo{
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Liked Songs</h1>
+  </header>
+  <div class="container">
+    <div class="artist-info">
+      <div class="artist-image">
+        <img src="https://s3.ap-south-1.amazonaws.com/discovery-prod-arsenal/ziegel/liked-songs.png" alt="Liked Songs">
+      </div>
+      <div class="artist-details">
+        <h2>This is your Curated List</h2>
+        <p>10 Songs</p>
+      </div>
+    </div>
+    <table class="song-table">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>Playlist</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr>
+          <td>1</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f53da957fd38702b96202455" alt="Song 1"></td>
+          <td id="demo"><a href="homepage.html">Your Liked Songs</a></td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67706f00000003531306eed8b8133bb53668ef" alt="Song 1"></td>
+          <td id="demo"><a href="homepage.html">English Playlist</a></td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td class="song-image"><img src="https://i.ytimg.com/vi/3_jbJP3bppI/maxresdefault.jpg" alt="Song 1"></td>
+          <td class="demo"><a href="homepage.html">Anime Songs</a></td>
+        </tr>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

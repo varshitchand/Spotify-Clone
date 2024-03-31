@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .logo{
+            margin-top: 2vh;
+            width: 16vw;
+        }
+        .sign-up-button{
+            width: 25vw;
+            border-radius: 35px;
+            padding: 4px 0px 0px 0px;
+        }
+        .text{
+            color: white;
+            font-size: 20px;
+        }
+        #facebook{
+            background-color: rgb(42, 42, 255);
+            border: none;
+            font-size: 18px;
+            color: antiquewhite;
+        }
+        #facebook:hover{
+            box-shadow: 1px 1px 15px 0px rgb(0, 89, 255);
+        }
+        #google{
+            background: linear-gradient(90deg,rgb(255, 8, 8),rgb(255, 255, 23),rgb(25, 255, 25));
+            border: none;
+            font-size: 19px;
+            color: black;
+            margin-top: 1.5vh;
+            margin-bottom: 6vh;
+        }
+        #google:hover{
+            box-shadow: 1px 1px 15px 0px orangered;
+        }
+        .form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .input-box{
+            width: 25vw;
+            height: 40px;
+            border-radius: 5px;
+            padding: 4px 10px;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            font-size: large;
+        }
+        .submit{
+            width: 10vw;
+        height: 55px;
+        border-radius: 30px;
+        font-size: 18px;
+        background-color: rgb(0, 231, 77);
+        border: none;
+        }
+        .submit:hover{
+            box-shadow: 1px 1px 10px 0 rgb(9, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img class="logo" src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2022/03/Spotify-Logo-Font-1.jpg?fit=1600%2C1066&ssl=1" alt="spotify-logo">
+        <br>
+        <h3 style="color: white; font-size: 30px;">Sign up for free to start listening.</h3>
+        <br>
+        <button class="sign-up-button" id="facebook"><span style="font-size: 35px;color: white;">f</span> <pre style="display: inline-block;">   </pre> Sign Up with Facebook</button>
+        <br>
+        <button class="sign-up-button" id="google"><span style="font-size: 32px;color: rgb(255, 255, 255);margin: -25px;">G</span> <pre style="display: inline-block;">     </pre> Sign Up with Google</button>
+        <hr width="450px">
+        <form class="form">
+            <p class="text">What's your email</p>
+            <input class="input-box" type="text" name="email" id="email" placeholder="Enter your email" />
+            <div id="email-error"></div>
+            <p class="text">Create a password</p>
+            <input class="input-box" type="password" name="password" id="password" placeholder="Create a password">
+            <div id="password-error"></div>
+            <p class="text">What should we call you?</p>
+            <input class="input-box" type="text" name="name" id="name" style="margin-bottom: -10px;" placeholder="Enter a profile name" />
+            <p class="text" style=" font-size: small;margin-bottom: 30px;">This name appears on your profile</p>
+            <p class="text">What's your date of birth?</p>
+            <input class="input-box" type="date" name="date" id="date">
+            <div>
+                <p class="text">What's your gender?</p>
+                <input class="text" type="radio" name="gender" value="M"> <pre style="display: inline-block;">      </pre> Male</input><br> 
+                <input class="text" type="radio" name="gender" value="F"> <pre style="display: inline-block;">     </pre> Female</input><br>
+                <input class="text" type="radio" name="gender" value="O"> <pre style="display: inline-block;"> </pre> Prefer not to say</input><br>
+                <br>
+            </div>
+            <div>
+                <input type="checkbox" name="update" class="text"> <pre style="display: inline-block;">  </pre> Keep me updated with messages from Spotify</input>
+            </div>
+            <br>
+            <button class="submit" type="button"  onclick="submitFunc()">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function submitFunc() {
+
+
+        const password = document.getElementById("password").value;
+        const email = document.getElementById("email").value;
+
+        document.getElementById("password-error").innerHTML = ''
+        document.getElementById("email-error").innerHTML = ''
+
+        console.log(password,email);
+
+        const emailRegex = /\S+@\S+\.\S+$/;
+
+        let flag = 1
+
+        if (password == '') {
+            document.getElementById("password-error").innerHTML = '<p  style="color: red;">Password is required</p>';
+            flag = 0
+        } else if(password.length < 3) {
+            document.getElementById("password-error").innerHTML = '<p  style="color: red;">Password Should Be Minimum Of 3 Chars Long.</p>';
+            flag = 0
+        }
+
+        if (email == '') {
+            document.getElementById("email-error").innerHTML = '<p  style="color: red;">Email is required</p>';
+            flag = 0
+        } else if (!emailRegex.test(email)) {
+            document.getElementById("email-error").innerHTML = '<p  style="color: red;">Enter valid Email</p>';
+            flag = 0
+        }
+
+        if(flag)
+        {
+            window.location.href = 'homepage.html';
+        }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #262a27;
+  color: #FFFFFF;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: fade-in 1s ease-in-out;
+}
+
+header img {
+  padding-top: 5px;
+  width: 110px;
+  margin-right: 10px;
+}
+
+h1, h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+section {
+  margin-bottom: 30px;
+  animation: slide-up 1s ease-in-out;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-item {
+  text-align: left;
+  animation: scale-in 0.5s ease-in-out;
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.grid-item span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+}
+.grid-item div{
+  color: grey;
+  margin-top: 8px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+</style>
+<body>
+  <header>
+    <img src="https://th.bing.com/th/id/R.fb82d6a1738f0154a014dc4008a9db5b?rik=hWFN%2bzkKpXWhMQ&riu=http%3a%2f%2fsouthernjustis.com%2fwp-content%2fuploads%2f2019%2f11%2fSpotify.png&ehk=fnYC5QO3DakWw2%2bjP1KS7ZzRV7JKBNIjapqNlRBfoPE%3d&risl=&pid=ImgRaw&r=0" alt="Spotify Logo">
+    <h1>Browse</h1>
+  </header>
+
+  <section id="focus">
+    <h2>Focus</h2>
+    <br><br>
+    <div class="grid-container">
+      <div class="grid-item">
+        <a href="podcasts.html"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2021/10/Spotify-DiscoverThis-Final.jpg"></a>
+        <span>Podcasts</span>
+        <div>Inspirational, Crime Drama, Horror and many more.</div>
+        
+      </div>
+      <div class="grid-item">
+        <a href="deepfocus.html"><img src="https://i.scdn.co/image/ab67706f000000035551996f500ba876bda73fa5" alt="Focus 2"></a>
+        <span>Deep Focus</span>
+        <div>Keep calm and focus with ambient and post-rock music.</div>
+      </div>
+      <div class="grid-item">
+        <a href="virtualevents.html"><img src="https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2022/03/spotify-playlist-cover-man-with-headphones-sunglasses-032322.jpg"></a>
+        <span>Virtual Events</span>
+        <div>Now listen to virtual events</div>
+      </div>
+      <div class="grid-item">
+        <a href="new_releases.html"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/f5a34e108782021.5fc5820ec88bf.png" alt="Focus 4"></a>
+        <span>New Releases</span>
+        <div>Latest tracks booming the world right now</div>
+      </div>
+      <div class="grid-item">
+        <a href="weekly discover.html"><img src="https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/qt33zkTFFpo0vEs6qkLN1VxSpJMYudFSE-JAcoCE2Ko2QoeXQ8SGf00WDbQffmLt9F8m52pE3r5PyqfZjwK-GW0jf4eeZQZEinWxYwjWCEw=/NjQ6NDU6NzFUODEtNjAtMw=="></a>
+        <span>Discover the Songs</span>
+        <div>Lounge and discover the hidden gems.</div>
+      </div>
+      </div>
+      <!-- Add more Focus items as needed -->
+    </div>
+  </section>
+
+
+  <section id="soundsOfIndia">
+    <h2>Sounds of India</h2>
+    <br><br>
+    <div class="grid-container">
+      <div class="grid-item">
+        <a href="soundsofmumbai.html"><img src="https://th.bing.com/th/id/OIP.JNOmvGd065iogBCdoaZs1AHaHa?pid=ImgDet&rs=1" alt="Sound 1"></a>
+        <span>The Sound of MumbaiIN</span>
+        <div>Sea Shore and the Busy street of Mumbai  which define our Songs..</div>
+      </div>
+      <div class="grid-item">
+        <a href=""><img src="https://th.bing.com/th/id/OIP.HKc-YlyGJTZJhos7DZOkvwHaHa?pid=ImgDet&rs=1" alt="Sound 2"></a>
+        <span>The Sound of Kolkata</span>
+        <div>Calcutta Meetha Pan and Howrah Bridge in which our he..</div>
+      </div>
+      <div class="grid-item">
+        <a href=""><img src="https://th.bing.com/th/id/OIP.Dcxcv4aXa8kUAzQNw4faVAHaHa?pid=ImgDet&rs=1" alt="Sound 3"></a>
+        <span>The Sound of Delhi</span>
+        <div>The Capital of India with hearts of million gems</div>
+      </div>
+      <div class="grid-item">
+        <a href=""><img src="https://th.bing.com/th/id/OIP.Xic_wkAXsWipJ5y285jMKAHaHa?pid=ImgDet&rs=1" alt="Sound 3"></a>
+        <span>The Sound of Chennai</span>
+        <div>Sambar and the Songs of Chennai never gets boring</div>
+      </div>
+      <div class="grid-item">
+        <a href=""><img src="https://th.bing.com/th/id/OIP.6mNqkzSCNfvZ1X19vGT_rwHaHa?pid=ImgDet&rs=1" alt="Sound 3"></a>
+        <span>The Sound of Hyderabad</span>
+        <div>Hyderbadi ka Songs which defines a Hyderabadi</div>
+      </div>
+      <!-- Add more Sounds of India items as needed -->
+    </div>
+  </section>
+</body>
+</html>

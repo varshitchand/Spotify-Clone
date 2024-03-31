@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Liked Playlist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #191414;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1DB954;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .artist-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .artist-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    .artist-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .artist-details {
+      text-align: center;
+    }
+
+    .song-table {
+      width: 800px;
+      border-collapse: collapse;
+    }
+
+    .song-table thead {
+      background-color: #1DB954;
+    }
+
+    .song-table th,
+    .song-table td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .song-table th {
+      font-weight: bold;
+    }
+
+    .song-table tbody tr:nth-child(even) {
+      background-color: #282828;
+    }
+
+    .song-table tbody tr:hover {
+      background-color: #383838;
+    }
+
+    .song-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .song-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .liked-playlist-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1DB954;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .liked-playlist-button:hover {
+      background-color: #168f3a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top 50</h1>
+  </header>
+  <div class="container">
+    <div class="artist-info">
+      <div class="artist-image">
+        <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg" alt="Liked Songs">
+      </div>
+      <div class="artist-details">
+        <h2>Top 50 Global</h2>
+        <p>the 50 best hits that shaked this world</p>
+      </div>
+    </div>
+    <table class="song-table">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>Song Image</th>
+          <th>Title</th>
+  
+          <th>Song Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732071a0c79802d9375a53bfef" alt="Song 1"></td>
+          <td>Ella Baila Sola</td>
+   
+          <td>5:08</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02ab5c9cd818ad6ed3e9b79cd1" alt="Song 1"></td>
+          <td>WHERE SHE GOES</td>
+        
+     
+          <td>3:10</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273716c0b0ad51594ff788b5f06" alt="Song 1"></td>
+          <td>un x100to</td> </td>
+        
+          <td>2:45</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2735259fb851b43dfd902e74542" alt="Song 1"></td>
+          <td>sprinter </td>
+   
+          <td>1:59</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="Song 5"></td>
+          <td>Flowers</td>
+         
+        
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2734139795c2c68f55d02fb6240" alt="Song 5"></td>
+          <td>Le Babe - remix
+          </td>
+         
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732a43f1ca88564597292f2d78" alt="Song 5"></td>
+          <td>As It Was</td>
+         
+       
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td class="song-image"><img src="https://resizing.flixster.com/DGXCCinFTBzyR5pd-Hy5VszKqOI=/206x305/v2/https://flxt.tmsimg.com/assets/p32988_p_v8_ae.jpg" alt="Song 5"></td>
+          <td>Kill Bill</td>
+        
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>9</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273d814e7bfbbfd8fcfe4c1a08b" alt="Song 5"></td>
+          <td>Money</td>
+   
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>10</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f8b83bc0fb25c1526113ce86" alt="Song 5"></td>
+          <td>Exodus</td>
+     
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732071a0c79802d9375a53bfef" alt="Song 1"></td>
+            <td>Ella Baila Sola</td>
+     
+            <td>5:08</td>
+          </tr>
+          
+          <tr>
+            <td>12</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02ab5c9cd818ad6ed3e9b79cd1" alt="Song 1"></td>
+            <td>WHERE SHE GOES</td>
+          
+       
+            <td>3:10</td>
+          </tr>
+  
+          <tr>
+            <td>13</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273716c0b0ad51594ff788b5f06" alt="Song 1"></td>
+            <td>un x100to</td> </td>
+          
+            <td>2:45</td>
+          </tr>
+  
+          <tr>
+            <td>14</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2735259fb851b43dfd902e74542" alt="Song 1"></td>
+            <td>sprinter </td>
+     
+            <td>1:59</td>
+          </tr>
+  
+          <tr>
+            <td>15</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="Song 5"></td>
+            <td>Flowers</td>
+           
+          
+            <td>4:10</td>
+          </tr>
+
+
+          <tr>
+            <td>16</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2734139795c2c68f55d02fb6240" alt="Song 5"></td>
+            <td>Le Babe - remix
+            </td>
+           
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>17</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732a43f1ca88564597292f2d78" alt="Song 5"></td>
+            <td>As It Was</td>
+           
+         
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>18</td>
+            <td class="song-image"><img src="https://resizing.flixster.com/DGXCCinFTBzyR5pd-Hy5VszKqOI=/206x305/v2/https://flxt.tmsimg.com/assets/p32988_p_v8_ae.jpg" alt="Song 5"></td>
+            <td>Kill Bill</td>
+          
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>19</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273d814e7bfbbfd8fcfe4c1a08b" alt="Song 5"></td>
+            <td>Money</td>
+     
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>20</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f8b83bc0fb25c1526113ce86" alt="Song 5"></td>
+            <td>Exodus</td>
+       
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>21</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732071a0c79802d9375a53bfef" alt="Song 1"></td>
+            <td>Ella Baila Sola</td>
+     
+            <td>5:08</td>
+          </tr>
+          
+          <tr>
+            <td>22</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02ab5c9cd818ad6ed3e9b79cd1" alt="Song 1"></td>
+            <td>WHERE SHE GOES</td>
+          
+       
+            <td>3:10</td>
+          </tr>
+  
+          <tr>
+            <td>23</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273716c0b0ad51594ff788b5f06" alt="Song 1"></td>
+            <td>un x100to</td> </td>
+          
+            <td>2:45</td>
+          </tr>
+  
+          <tr>
+            <td>24</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2735259fb851b43dfd902e74542" alt="Song 1"></td>
+            <td>sprinter </td>
+     
+            <td>1:59</td>
+          </tr>
+  
+          <tr>
+            <td>25</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="Song 5"></td>
+            <td>Flowers</td>
+           
+          
+            <td>4:10</td>
+          </tr>
+
+          <tr>
+            <td>26</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2734139795c2c68f55d02fb6240" alt="Song 5"></td>
+            <td>Le Babe - remix
+            </td>
+           
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>27</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732a43f1ca88564597292f2d78" alt="Song 5"></td>
+            <td>As It Was</td>
+           
+         
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>28</td>
+            <td class="song-image"><img src="https://resizing.flixster.com/DGXCCinFTBzyR5pd-Hy5VszKqOI=/206x305/v2/https://flxt.tmsimg.com/assets/p32988_p_v8_ae.jpg" alt="Song 5"></td>
+            <td>Kill Bill</td>
+          
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>29</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273d814e7bfbbfd8fcfe4c1a08b" alt="Song 5"></td>
+            <td>Money</td>
+     
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>30</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f8b83bc0fb25c1526113ce86" alt="Song 5"></td>
+            <td>Exodus</td>
+       
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>31</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732071a0c79802d9375a53bfef" alt="Song 1"></td>
+            <td>Ella Baila Sola</td>
+     
+            <td>5:08</td>
+          </tr>
+          
+          <tr>
+            <td>32</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02ab5c9cd818ad6ed3e9b79cd1" alt="Song 1"></td>
+            <td>WHERE SHE GOES</td>
+          
+       
+            <td>3:10</td>
+          </tr>
+  
+          <tr>
+            <td>33</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273716c0b0ad51594ff788b5f06" alt="Song 1"></td>
+            <td>un x100to</td> </td>
+          
+            <td>2:45</td>
+          </tr>
+  
+          <tr>
+            <td>34</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2735259fb851b43dfd902e74542" alt="Song 1"></td>
+            <td>sprinter </td>
+     
+            <td>1:59</td>
+          </tr>
+  
+          <tr>
+            <td>35</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="Song 5"></td>
+            <td>Flowers</td>
+           
+          
+            <td>4:10</td>
+          </tr>
+
+          <tr>
+            <td>36</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2734139795c2c68f55d02fb6240" alt="Song 5"></td>
+            <td>Le Babe - remix
+            </td>
+           
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>37</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732a43f1ca88564597292f2d78" alt="Song 5"></td>
+            <td>As It Was</td>
+           
+         
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>38</td>
+            <td class="song-image"><img src="https://resizing.flixster.com/DGXCCinFTBzyR5pd-Hy5VszKqOI=/206x305/v2/https://flxt.tmsimg.com/assets/p32988_p_v8_ae.jpg" alt="Song 5"></td>
+            <td>Kill Bill</td>
+          
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>39</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273d814e7bfbbfd8fcfe4c1a08b" alt="Song 5"></td>
+            <td>Money</td>
+     
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>40</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f8b83bc0fb25c1526113ce86" alt="Song 5"></td>
+            <td>Exodus</td>
+       
+            <td>4:10</td>
+          </tr>
+
+          <tr>
+            <td>41</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732071a0c79802d9375a53bfef" alt="Song 1"></td>
+            <td>Ella Baila Sola</td>
+     
+            <td>5:08</td>
+          </tr>
+          
+          <tr>
+            <td>42</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02ab5c9cd818ad6ed3e9b79cd1" alt="Song 1"></td>
+            <td>WHERE SHE GOES</td>
+          
+       
+            <td>3:10</td>
+          </tr>
+  
+          <tr>
+            <td>43</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273716c0b0ad51594ff788b5f06" alt="Song 1"></td>
+            <td>un x100to</td> </td>
+          
+            <td>2:45</td>
+          </tr>
+  
+          <tr>
+            <td>44</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2735259fb851b43dfd902e74542" alt="Song 1"></td>
+            <td>sprinter </td>
+     
+            <td>1:59</td>
+          </tr>
+  
+          <tr>
+            <td>45</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="Song 5"></td>
+            <td>Flowers</td>
+           
+          
+            <td>4:10</td>
+          </tr>
+
+          <tr>
+            <td>46</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2734139795c2c68f55d02fb6240" alt="Song 5"></td>
+            <td>Le Babe - remix
+            </td>
+           
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>47</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b2732a43f1ca88564597292f2d78" alt="Song 5"></td>
+            <td>As It Was</td>
+           
+         
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>48</td>
+            <td class="song-image"><img src="https://resizing.flixster.com/DGXCCinFTBzyR5pd-Hy5VszKqOI=/206x305/v2/https://flxt.tmsimg.com/assets/p32988_p_v8_ae.jpg" alt="Song 5"></td>
+            <td>Kill Bill</td>
+          
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>49</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273d814e7bfbbfd8fcfe4c1a08b" alt="Song 5"></td>
+            <td>Money</td>
+     
+            <td>4:10</td>
+          </tr>
+  
+          <tr>
+            <td>50</td>
+            <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f8b83bc0fb25c1526113ce86" alt="Song 5"></td>
+            <td>Exodus</td>
+       
+            <td>4:10</td>
+          </tr>
+
+
+
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

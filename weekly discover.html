@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Liked Playlist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #191414;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1DB954;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .artist-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .artist-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    .artist-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .artist-details {
+      text-align: center;
+    }
+
+    .song-table {
+      width: 800px;
+      border-collapse: collapse;
+    }
+
+    .song-table thead {
+      background-color: #1DB954;
+    }
+
+    .song-table th,
+    .song-table td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .song-table th {
+      font-weight: bold;
+    }
+
+    .song-table tbody tr:nth-child(even) {
+      background-color: #282828;
+    }
+
+    .song-table tbody tr:hover {
+      background-color: #383838;
+    }
+
+    .song-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .song-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .liked-playlist-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1DB954;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .liked-playlist-button:hover {
+      background-color: #168f3a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Discover</h1>
+  </header>
+  <div class="container">
+    <div class="artist-info">
+      <div class="artist-image">
+        <img src="https://www.hypebot.com/wp-content/uploads/2020/07/discover-weekly.png" alt="Liked Songs">
+      </div>
+      <div class="artist-details">
+        <h2>Weekly Discovery 2023</h2>
+        <p>10 Songs</p>
+      </div>
+    </div>
+    <table class="song-table">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>Song Image</th>
+          <th>Title</th>
+  
+          <th>Song Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02a2d24b99230c5d1589eafeed" alt="Song 1"></td>
+          <td>Make me high</td>
+   
+          <td>5:08</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273ef1184f652847f2f2bf126e9" alt="Song 1"></td>
+          <td>Higher With You</td>
+        
+     
+          <td>3:10</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273adee3ea8087cc2a78ebe5127" alt="Song 1"></td>
+          <td>In My Head </td>
+        
+          <td>2:45</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e02fffbc6bb8f405c2dacf8d64b" alt="Song 1"></td>
+          <td>walking on a dream </td>
+   
+          <td>1:59</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b27348567ebe7b725c76f0e19b54" alt="Song 5"></td>
+          <td>Something To Say</td>
+         
+        
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273bb607a63a7dceb48b4d189e3" alt="Song 5"></td>
+          <td>Baila Conmigo</td>
+         
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b27397dafb24b54ee2cf1da5241a" alt="Song 5"></td>
+          <td>Comes and Goes</td>
+         
+       
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d00001e020207a7ac52c61f12c488e6bf" alt="Song 5"></td>
+          <td>Amok</td>
+        
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>9</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273d814e7bfbbfd8fcfe4c1a08b" alt="Song 5"></td>
+          <td>Money</td>
+   
+          <td>4:10</td>
+        </tr>
+
+        <tr>
+          <td>10</td>
+          <td class="song-image"><img src="https://i.scdn.co/image/ab67616d0000b273f8b83bc0fb25c1526113ce86" alt="Song 5"></td>
+          <td>Exodus</td>
+     
+          <td>4:10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
